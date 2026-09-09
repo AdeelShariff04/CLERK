@@ -1,6 +1,6 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
-import ProposalEditHeader from '@/components/proposalEditCreate/ProposalEditHeader'
+import HeaderInner from '@/components/shared/pageHeader/HeaderInner'
 import ProposalCreateContent from '@/components/proposalEditCreate/ProposalCreateContent'
 import ProposalSent from '@/components/proposalEditCreate/ProposalSent'
 
@@ -8,7 +8,7 @@ const ProposalCreate = () => {
     return (
         <>
             <PageHeader>
-                <ProposalEditHeader />
+                <HeaderInner listName="Proposal" to="/proposal/create" />
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>

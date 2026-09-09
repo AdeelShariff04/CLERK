@@ -1,22 +1,21 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
-import HeaderInner from '@/components/shared/pageHeader/HeaderInner'
 import InvoiceFormContent from '@/components/forms/invoice-form'
 
-const PaymentCreate = () => {
+const PaymentEdit = () => {
     return (
         <>
             <PageHeader>
-                <HeaderInner listName="Invoice" to="/payment/create" />
+                {/* <PaymentHeader /> */}
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>
                     {/* <PaymentTable /> */}
-                    <InvoiceFormContent />
+                    <InvoiceFormContent isEdit />
                 </div>
             </div>
         </>
     )
 }
 
-export default PaymentCreate
+export default PaymentEdit

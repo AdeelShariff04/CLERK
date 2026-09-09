@@ -1,13 +1,13 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
 import ProjectCreateContent from '@/components/projectsCreate/ProjectCreateContent'
-import ProjectCreateHeader from '@/components/projectsCreate/ProjectCreateHeader'
+import HeaderInner from '@/components/shared/pageHeader/HeaderInner'
 
 const ProjectsCreate = () => {
     return (
         <>
             <PageHeader>
-                <ProjectCreateHeader />
+                <HeaderInner listName="Project" to="/projects/create" />
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>

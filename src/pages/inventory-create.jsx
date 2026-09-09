@@ -1,17 +1,17 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
-import InvoiceCreate from '@/components/payment/InvoiceCreate'
+import HeaderInner from '@/components/shared/pageHeader/HeaderInner'
+import InventoryFormContent from '@/components/forms/inventory-form'
 
 const InventoryCreate = () => {
     return (
         <>
             <PageHeader>
-                {/* <PaymentHeader /> */}
+                <HeaderInner listName="Product" to="/inventory/add" />
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>
-                    {/* <PaymentTable /> */}
-                    <InvoiceCreate />
+                    <InventoryFormContent />
                 </div>
             </div>
         </>

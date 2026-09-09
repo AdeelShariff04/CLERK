@@ -1,21 +1,20 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
-import HeaderInner from '@/components/shared/pageHeader/HeaderInner'
-import SupplierFormContent from '@/components/forms/supplier-form'
+import InventoryFormContent from '@/components/forms/inventory-form'
 
-const SupplierCreate = () => {
+const InventoryEdit = () => {
     return (
         <>
             <PageHeader>
-                <HeaderInner listName="Supplier" to="/supplier/add" />
+                {/* <PaymentHeader /> */}
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>
-                    <SupplierFormContent />
+                    <InventoryFormContent />
                 </div>
             </div>
         </>
     )
 }
 
-export default SupplierCreate
+export default InventoryEdit

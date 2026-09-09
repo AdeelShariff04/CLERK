@@ -2,8 +2,14 @@ import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/root";
 import Home from "../pages/home";
 import InventoryList from "../pages/inventory-list";
+import InventoryCreate from "../pages/inventory-create";
 import InventoryView from "../pages/inventory-view";
+import InventoryEdit from "../pages/inventory-edit";
 import SupplierList from "../pages/supplier-list";
+import SupplierCreate from "../pages/supplier-create";
+import EmployeeList from "../pages/employee-list";
+import EmployeeCreate from "../pages/employee-create";
+import EmployeeView from "../pages/employee-view";
 import SupplierView from "../pages/supplier-view";
 import Analytics from "../pages/analytics";
 import ReportsSales from "../pages/reports-sales";
@@ -19,18 +25,19 @@ import AppsNotes from "../pages/apps-notes";
 import AppsCalender from "../pages/apps-calender";
 import AppsStorage from "../pages/apps-storage";
 import Proposalist from "../pages/proposal-list";
-import CustomersList from "../pages/customers-list";
+import CustomersList from "../pages/customer-list";
 import ProposalView from "../pages/proposal-view";
 import ProposalEdit from "../pages/proposal-edit";
 import LeadsList from "../pages/leadsList";
-import CustomersView from "../pages/customers-view";
-import CustomersCreate from "../pages/customers-create";
+import CustomersView from "../pages/customer-view";
+import CustomersCreate from "../pages/customer-create";
 import ProposalCreate from "../pages/proposal-create";
 import LeadsView from "../pages/leads-view";
 import LeadsCreate from "../pages/leads-create";
 import PaymentList from "../pages/payment-list";
 import PaymentView from "../pages/payment-view/";
 import PaymentCreate from "../pages/payment-create";
+import PaymentEdit from "../pages/payment-edit";
 import ProjectsList from "../pages/projects-list";
 import ProjectsView from "../pages/projects-view";
 import ProjectsCreate from "../pages/projects-create";
@@ -88,7 +95,15 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/inventory/add",
+                element: <InventoryCreate />
+            },
+            {
+                path: "/inventory/view",
                 element: <InventoryView />
+            },
+            {
+                path: "/inventory/edit",
+                element: <InventoryEdit />
             },
             {
                 path: "/supplier/list",
@@ -96,7 +111,23 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/supplier/add",
+                element: <SupplierCreate />
+            },
+            {
+                path: "/supplier/view",
                 element: <SupplierView />
+            },
+            {
+                path: "/employees/list",
+                element: <EmployeeList />
+            },
+            {
+                path: "/employees/create",
+                element: <EmployeeCreate />
+            },
+            {
+                path: "/employees/view",
+                element: <EmployeeView />
             },
             {
                 path: "/dashboards/analytics",
@@ -145,6 +176,10 @@ export const router = createBrowserRouter([
             {
                 path: "/payment/create",
                 element: <PaymentCreate />
+            },
+            {
+                path: "/payment/edit",
+                element: <PaymentEdit />
             },
             {
                 path: "/customers/list",

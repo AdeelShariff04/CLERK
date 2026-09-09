@@ -1,21 +1,19 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
 import ProfileCard from '@/components/cards/profile-card'
-import SupplierHistoryCard from '@/components/cards/supplier-historycard'
+import EmployeeInfoCard from '@/components/cards/employee-infocard'
 
-const SupplierView = () => {
+const EmployeeView = () => {
     return (
         <>
-            <PageHeader>
-                <></>
-            </PageHeader>
-            <div className='main-content'>
-                <div className='row'>
+            <PageHeader />
+            <div className="main-content">
+                <div className="row">
                     <div className="col-md-4 mb-4">
-                        <ProfileCard type="supplier" />
+                        <ProfileCard type="employee" />
                     </div>
                     <div className="col-md-8 mb-4">
-                        <SupplierHistoryCard />
+                        <EmployeeInfoCard />
                     </div>
                 </div>
             </div>
@@ -23,4 +21,4 @@ const SupplierView = () => {
     )
 }
 
-export default SupplierView
+export default EmployeeView

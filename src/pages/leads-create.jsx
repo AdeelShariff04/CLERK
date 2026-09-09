@@ -1,13 +1,13 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
-import LeadsCreateHeader from '@/components/leadsViewCreate/LeadsCreateHeader'
+import HeaderInner from '@/components/shared/pageHeader/HeaderInner'
 import LeadsCreateContent from '@/components/leadsViewCreate/LeadsCreateContent'
 
 const LeadsCreate = () => {
     return (
         <>
             <PageHeader>
-                <LeadsCreateHeader />
+                <HeaderInner listName="Lead" to="/leads/create" />
             </PageHeader>
 
             <div className='main-content'>

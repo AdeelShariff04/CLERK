@@ -47,7 +47,7 @@
 		tbody {
 			tr {
 				&:last-child * {
-					border-bottom: transparent;
+					// border-bottom: transparent;
 				}
 			}
 		}
@@ -200,4 +200,20 @@
 	position: absolute;
 	top: 0;
 	left: -0;
+}
+
+.invoice-item-table {
+	.select-dropdown {
+		z-index: 1;
+
+		&:focus-within,
+		&:has(.dropdown-list) {
+			z-index: 20;
+		}
+	}
+
+	tbody tr:focus-within {
+		position: relative;
+		z-index: 10;
+	}
 }

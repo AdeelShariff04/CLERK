@@ -1,17 +1,17 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
-import CustomersCreateHeader from '@/components/customersCreate/CustomersCreateHeader'
-import CustomerCreateContent from '@/components/customersCreate/CustomerCreateContent'
+import HeaderInner from '@/components/shared/pageHeader/HeaderInner'
+import CustomerFormContent from '@/components/forms/customer-form'
 
 const CustomersCreate = () => {
     return (
         <>
             <PageHeader>
-                <CustomersCreateHeader />
+                <HeaderInner listName="Customer" to="/customers/create" />
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>
-                    <CustomerCreateContent />
+                    <CustomerFormContent />
                 </div>
             </div>
         </>

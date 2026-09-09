@@ -1,22 +1,21 @@
 import React from 'react'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
 import HeaderInner from '@/components/shared/pageHeader/HeaderInner'
-import InvoiceFormContent from '@/components/forms/invoice-form'
+import EmployeeFormContent from '@/components/forms/employee-form'
 
-const PaymentCreate = () => {
+const EmployeeCreate = () => {
     return (
         <>
             <PageHeader>
-                <HeaderInner listName="Invoice" to="/payment/create" />
+                <HeaderInner listName="Employee" to="/employees/create" />
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>
-                    {/* <PaymentTable /> */}
-                    <InvoiceFormContent />
+                    <EmployeeFormContent />
                 </div>
             </div>
         </>
     )
 }
 
-export default PaymentCreate
+export default EmployeeCreate

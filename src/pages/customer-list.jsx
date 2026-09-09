@@ -1,7 +1,6 @@
 import React from 'react'
-import CustomersTable from '@/components/customers/CustomersTable'
-import CustomersHeader from '@/components/customers/CustomersHeader'
-import Customers from '@/components/widgetsTables/Customers'
+import CustomerList from '@/components/tables/customer-list'
+import HeaderList from '@/components/shared/pageHeader/HeaderList'
 import PageHeader from '@/components/shared/pageHeader/PageHeader'
 import Footer from '@/components/shared/Footer'
 
@@ -9,11 +8,11 @@ const CustomersList = () => {
     return (
         <>
             <PageHeader>
-                <CustomersHeader />
+                <HeaderList listName="Customer" to="/customers/create" />
             </PageHeader>
             <div className='main-content'>
                 <div className='row'>
-                    <Customers title={"New Customers"}/>
+                    <CustomerList title={"New Customers"}/>
                 </div>
             </div>
             <Footer />

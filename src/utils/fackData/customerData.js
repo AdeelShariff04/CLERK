@@ -1,0 +1,12 @@
+export const customerData = [
+    { name: 'Alexandra Della', id: 'CUS-001', avatar: '/images/avatar/1.png', contact: '+1 (202) 555-0147', totalOrders: 24, totalSpent: '$4,860.00', lastVisit: '21 Sep, 2023', invoiceId: '#INV-987456', status: 'Active', statusColor: 'success' },
+    { name: 'Valentine Maton', id: 'CUS-002', avatar: '/images/avatar/2.png', contact: '+44 20 7946 0831', totalOrders: 18, totalSpent: '$3,245.50', lastVisit: '25 Sep, 2023', invoiceId: '#INV-987457', status: 'Active', statusColor: 'success' },
+    { name: 'Kenneth Hune', id: 'CUS-003', avatar: '/images/avatar/3.png', contact: '+33 1 42 68 53 00', totalOrders: 9, totalSpent: '$1,280.00', lastVisit: '16 Sep, 2023', invoiceId: '#INV-987458', status: 'Inactive', statusColor: 'secondary' },
+    { name: 'Malanie Hanvey', id: 'CUS-004', avatar: '/images/avatar/4.png', contact: '+49 30 901820', totalOrders: 32, totalSpent: '$7,415.75', lastVisit: '20 Sep, 2023', invoiceId: '#INV-987459', status: 'Active', statusColor: 'success' },
+    { name: 'Archie Cantones', id: 'CUS-005', avatar: '/images/avatar/5.png', contact: '+880 2 955 5555', totalOrders: 6, totalSpent: '$890.25', lastVisit: '20 Sep, 2023', invoiceId: '#INV-987460', status: 'Inactive', statusColor: 'secondary' },
+    { name: 'Sofia Bennett', id: 'CUS-006', avatar: '/images/avatar/6.png', contact: '+1 (415) 555-0198', totalOrders: 41, totalSpent: '$9,735.25', lastVisit: '28 Sep, 2023', invoiceId: '#INV-987461', status: 'Active', statusColor: 'success' },
+    { name: 'Liam Anderson', id: 'CUS-007', avatar: '/images/avatar/7.png', contact: '+61 2 5550 2341', totalOrders: 14, totalSpent: '$2,110.00', lastVisit: '24 Sep, 2023', invoiceId: '#INV-987462', status: 'Active', statusColor: 'success' },
+    { name: 'Emma Richardson', id: 'CUS-008', avatar: '/images/avatar/8.png', contact: '+1 (312) 555-0164', totalOrders: 7, totalSpent: '$1,045.80', lastVisit: '12 Sep, 2023', invoiceId: '#INV-987463', status: 'Inactive', statusColor: 'secondary' },
+    { name: 'Noah Thompson', id: 'CUS-009', avatar: '/images/avatar/9.png', contact: '+1 (617) 555-0129', totalOrders: 29, totalSpent: '$5,680.40', lastVisit: '27 Sep, 2023', invoiceId: '#INV-987464', status: 'Active', statusColor: 'success' },
+    { name: 'Isabella Martin', id: 'CUS-010', avatar: '/images/avatar/10.png', contact: '+34 91 555 0721', totalOrders: 11, totalSpent: '$1,925.65', lastVisit: '18 Sep, 2023', invoiceId: '#INV-987465', status: 'Inactive', statusColor: 'secondary' },
+]
