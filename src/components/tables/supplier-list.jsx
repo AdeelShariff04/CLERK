@@ -4,9 +4,12 @@ import Pagination from '@/components/shared/Pagination'
 import { supplierData } from '@/utils/fackData/supplierData'
 import { FiEdit, FiEye, FiFileText, FiTrash2, FiClock } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import BillPreviewSidebar from '@/components/shared/BillPreviewSidebar'
 
 const SupplierList = () => {
     const data = supplierData.trackerProjects
+    const [selectedBill, setSelectedBill] = useState(null)
     return (
         <div className="col-lg-12">
             <div className="card stretch stretch-full">
@@ -59,12 +62,12 @@ const SupplierList = () => {
                                                     <Link to="/supplier/view" className="avatar-text avatar-md" title="View">
                                                         <FiEye />
                                                     </Link>
-                                                    <a href="#" className="avatar-text avatar-md">
+                                                    <button type="button" className="avatar-text avatar-md border-0 bg-transparent" title="View supplier bill" onClick={() => setSelectedBill(supplier)}>
                                                         <FiFileText strokeWidth={1.6} />
-                                                    </a>
-                                                    <a href="#" className="avatar-text avatar-md">
+                                                    </button>
+                                                    <Link to="/supplier/edit" className="avatar-text avatar-md" title="Edit">
                                                         <FiEdit strokeWidth={1.6} />
-                                                    </a>
+                                                    </Link>
                                                     <a href="#" className="avatar-text avatar-md">
                                                         <FiTrash2 strokeWidth={1.6} />
                                                     </a>
@@ -81,6 +84,20 @@ const SupplierList = () => {
                 <div className="card-footer">
                     <Pagination />
                 </div>
+                {selectedBill && (
+                    <BillPreviewSidebar
+                        type="supplier"
+                        bill={{
+                            number: selectedBill.supplierId ? `#PO-${selectedBill.supplierId.replace('SUP-', '')}456` : undefined,
+                            name: selectedBill.companyName,
+                            contact: selectedBill.supplierName,
+                            payment: 'Account',
+                            subtotal: selectedBill.purchaseAmount,
+                            total: selectedBill.purchaseAmount,
+                        }}
+                        onClose={() => setSelectedBill(null)}
+                    />
+                )}
             </div>
         </div>
     )

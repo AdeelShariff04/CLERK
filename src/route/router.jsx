@@ -11,6 +11,9 @@ import EmployeeList from "../pages/employee-list";
 import EmployeeCreate from "../pages/employee-create";
 import EmployeeView from "../pages/employee-view";
 import SupplierView from "../pages/supplier-view";
+import CustomerEdit from "../pages/customer-edit";
+import EmployeeEdit from "../pages/employee-edit";
+import SupplierEdit from "../pages/supplier-edit";
 import Analytics from "../pages/analytics";
 import ReportsSales from "../pages/reports-sales";
 import ReportsLeads from "../pages/reports-leads";
@@ -118,6 +121,10 @@ export const router = createBrowserRouter([
                 element: <SupplierView />
             },
             {
+                path: "/supplier/edit",
+                element: <SupplierEdit />
+            },
+            {
                 path: "/employees/list",
                 element: <EmployeeList />
             },
@@ -128,6 +135,10 @@ export const router = createBrowserRouter([
             {
                 path: "/employees/view",
                 element: <EmployeeView />
+            },
+            {
+                path: "/employees/edit",
+                element: <EmployeeEdit />
             },
             {
                 path: "/dashboards/analytics",
@@ -192,6 +203,10 @@ export const router = createBrowserRouter([
             {
                 path: "/customers/create",
                 element: <CustomersCreate />
+            },
+            {
+                path: "/customers/edit",
+                element: <CustomerEdit />
             },
             {
                 path: "/leads/list",

@@ -65,9 +65,9 @@ const CustomerList = ({ title }) => {
                                                 <Link to="/customers/view" className="avatar-text avatar-md" title="View">
                                                     <FiEye />
                                                 </Link>
-                                                <a href="#" className="avatar-text avatar-md" title="Edit">
+                                                <Link to="/customers/edit" className="avatar-text avatar-md" title="Edit">
                                                     <FiEdit />
-                                                </a>
+                                                </Link>
                                                 <a href="#" className="avatar-text avatar-md" title="Delete">
                                                     <FiTrash2 />
                                                 </a>

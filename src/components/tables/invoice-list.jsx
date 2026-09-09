@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { FiEdit3, FiEye, FiPrinter, FiShare2, FiTrash2 } from 'react-icons/fi'
+import { FiEdit3, FiEye, FiPrinter, FiShare2, FiTrash2, FiFileText } from 'react-icons/fi'
 import { invoiceData } from '@/utils/fackData/invoiceData';
 import Table from '@/components/shared/table/Table';
+import BillPreviewSidebar from '@/components/shared/BillPreviewSidebar';
 
 const InvoiceList = () => {
+  const [selectedBill, setSelectedBill] = useState(null)
   const columns = [
     {
       accessorKey: 'id',
@@ -96,12 +98,9 @@ const InvoiceList = () => {
           <Link to="/payment/view" className="avatar-text avatar-md" title="View">
             <FiEye />
           </Link>
-          <a href="#" className="avatar-text avatar-md" title="Print">
-            <FiPrinter />
-          </a>
-          <a href="#" className="avatar-text avatar-md" title="Share">
-            <FiShare2 />
-          </a>
+          <button type="button" className="avatar-text avatar-md border-0 bg-transparent" title="View sales bill" onClick={() => setSelectedBill(info.row.original)}>
+            <FiFileText />
+          </button>
           <Link to="/payment/edit" className="avatar-text avatar-md" title="Edit">
             <FiEdit3 />
           </Link>
@@ -118,6 +117,20 @@ const InvoiceList = () => {
   return (
     <>
       <Table data={invoiceData} columns={columns} />
+      {selectedBill && (
+        <BillPreviewSidebar
+          bill={{
+            number: selectedBill.invoice,
+            date: selectedBill.date,
+            name: selectedBill.client?.name,
+            contact: selectedBill.client?.id,
+            payment: selectedBill.paymentType,
+            subtotal: selectedBill.billAmount,
+            total: selectedBill.billAmount,
+          }}
+          onClose={() => setSelectedBill(null)}
+        />
+      )}
     </>
   )
 }

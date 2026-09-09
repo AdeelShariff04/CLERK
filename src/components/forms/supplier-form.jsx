@@ -9,7 +9,7 @@ const statusOptions = [
     { label: 'Inactive', value: 'inactive' },
 ]
 
-const SupplierFormContent = () => {
+const SupplierFormContent = ({ isEdit = false }) => {
     const [selectedStatus, setSelectedStatus] = useState(statusOptions[0])
     const { handleImageUpload, uploadedImage } = useImageUpload()
 
@@ -33,14 +33,14 @@ const SupplierFormContent = () => {
 
                     <div className="row">
                         <div className="col-lg-6">
-                            <Input icon="feather-user" label="Supplier Name" labelId="supplierName" placeholder="Carlos Mendes" name="supplierName" />
-                            <Input icon="feather-activity" label="Supplier ID" labelId="supplierId" placeholder="SUP-001" name="supplierId" />
-                            <Input icon="feather-briefcase" label="Company Name" labelId="companyName" placeholder="Mendes Electronics" name="companyName" />
-                            <Input icon="feather-phone" label="Contact" labelId="supplierContact" placeholder="+55 11 98765-4321" name="contact" />
+                            <Input icon="feather-user" label="Supplier Name" labelId="supplierName" placeholder="Carlos Mendes" name="supplierName" defaultValue={isEdit ? 'Carlos Mendes' : undefined} />
+                            <Input icon="feather-activity" label="Supplier ID" labelId="supplierId" placeholder="SUP-001" name="supplierId" defaultValue={isEdit ? 'SUP-001' : undefined} />
+                            <Input icon="feather-briefcase" label="Company Name" labelId="companyName" placeholder="Mendes Electronics" name="companyName" defaultValue={isEdit ? 'Mendes Electronics' : undefined} />
+                            <Input icon="feather-phone" label="Contact" labelId="supplierContact" placeholder="+55 11 98765-4321" name="contact" defaultValue={isEdit ? '+55 11 98765-4321' : undefined} />
                         </div>
                         <div className="col-lg-6">
-                            <Input icon="feather-mail" label="Email" labelId="supplierEmail" placeholder="carlos@mendeselectronics.com" name="email" type="email" />
-                            <Input icon="feather-map-pin" label="Address" labelId="supplierAddress" placeholder="Supplier address" name="address" />
+                            <Input icon="feather-mail" label="Email" labelId="supplierEmail" placeholder="carlos@mendeselectronics.com" name="email" type="email" defaultValue={isEdit ? 'carlos@mendeselectronics.com' : undefined} />
+                            <Input icon="feather-map-pin" label="Address" labelId="supplierAddress" placeholder="Supplier address" name="address" defaultValue={isEdit ? 'Sao Paulo, Brazil' : undefined} />
                             <div className="row mb-4 align-items-center">
                                 <div className="col-lg-4">
                                     <label className="fw-semibold">Status: </label>
