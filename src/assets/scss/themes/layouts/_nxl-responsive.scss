@@ -610,7 +610,7 @@
 			display: inline-flex;
 		}
 		.nxl-navigation-toggle {
-			display: none;
+			display: none !important;
 		}
 		&.mob-header-active {
 			top: $header-height;

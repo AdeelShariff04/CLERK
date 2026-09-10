@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layout/root";
-import Home from "../pages/home";
 import InventoryList from "../pages/inventory-list";
 import InventoryCreate from "../pages/inventory-create";
 import InventoryView from "../pages/inventory-view";
@@ -14,7 +13,8 @@ import SupplierView from "../pages/supplier-view";
 import CustomerEdit from "../pages/customer-edit";
 import EmployeeEdit from "../pages/employee-edit";
 import SupplierEdit from "../pages/supplier-edit";
-import Analytics from "../pages/analytics";
+import Dashboard from "../pages/dashboard";
+import ExpenseTracker from "../pages/expense-tracker";
 import ReportsSales from "../pages/reports-sales";
 import ReportsLeads from "../pages/reports-leads";
 import ReportsProject from "../pages/reports-project";
@@ -23,6 +23,7 @@ import LayoutApplications from "../layout/layoutApplications";
 import AppsEmail from "../pages/apps-email";
 import ReportsTimesheets from "../pages/reports-timesheets";
 import LoginCover from "../pages/login-cover";
+import LoginCreative from "../pages/login-creative";
 import AppsTasks from "../pages/apps-tasks";
 import AppsNotes from "../pages/apps-notes";
 import AppsCalender from "../pages/apps-calender";
@@ -60,7 +61,6 @@ import SettingsFinance from "../pages/settings-finance";
 import SettingsSupport from "../pages/settings-support";
 import LayoutAuth from "../layout/layoutAuth";
 import LoginMinimal from "../pages/login-minimal";
-import LoginCreative from "../pages/login-creative";
 import RegisterCover from "../pages/register-cover";
 import RegisterMinimal from "../pages/register-minimal";
 import RegisterCreative from "../pages/register-creative";
@@ -89,8 +89,12 @@ export const router = createBrowserRouter([
         element: <RootLayout />,
         children: [
             {
-                path: "/",
-                element: <Home />
+                path: "/dashboard",
+                element: <Dashboard />
+            },
+            {
+                path: "/expense-tracker",
+                element: <ExpenseTracker />
             },
             {
                 path: "/inventory/list",
@@ -139,10 +143,6 @@ export const router = createBrowserRouter([
             {
                 path: "/employees/edit",
                 element: <EmployeeEdit />
-            },
-            {
-                path: "/dashboards/analytics",
-                element: <Analytics />
             },
             {
                 path: "/reports/sales",
@@ -351,6 +351,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <LayoutAuth />,
         children: [
+            {
+                index: true,
+                element: <LoginCreative />
+            },
             {
                 path: "/authentication/login/cover",
                 element: <LoginCover />
