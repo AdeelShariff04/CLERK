@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiFacebook, FiGithub, FiTwitter } from 'react-icons/fi'
+import { FiFacebook, FiGithub, FiPhoneCall, FiTwitter } from 'react-icons/fi'
 import { Link, useNavigate } from 'react-router-dom'
 
 const LoginForm = ({ registerPath, resetPath }) => {
@@ -14,10 +14,10 @@ const LoginForm = ({ registerPath, resetPath }) => {
         <>
             <h2 className="fs-20 fw-bolder mb-4">Login</h2>
             <h4 className="fs-13 fw-bold mb-2">Login to your account</h4>
-            <p className="fs-12 fw-medium text-muted">Thank you for get back <strong>Nelel</strong> web applications, let's access our the best recommendation for you.</p>
+            <p className="fs-12 fw-medium text-muted">Thank you for get back <strong>MAS</strong> web applications, let's access our the best recommendation for you.</p>
             <form onSubmit={handleSubmit} className="w-100 mt-4 pt-2">
                 <div className="mb-4">
-                    <input type="email" className="form-control" placeholder="Email or Username" defaultValue="wrapcode.info@gmail.com" required />
+                    <input type="email" className="form-control" placeholder="Email or Username" defaultValue="inquire.adeel@gmail.com" required />
                 </div>
                 <div className="mb-3">
                     <input type="password" className="form-control" placeholder="Password" defaultValue="123456" required />
@@ -30,7 +30,7 @@ const LoginForm = ({ registerPath, resetPath }) => {
                         </div>
                     </div>
                     <div>
-                        <Link to={resetPath} className="fs-11 text-primary">Forget password?</Link>
+                        <Link className="fs-11 text-primary">Forget password?</Link>
                     </div>
                 </div>
                 <div className="mt-5">
@@ -51,10 +51,22 @@ const LoginForm = ({ registerPath, resetPath }) => {
                     </a>
                 </div>
             </div> */}
-            {/* <div className="mt-5 text-muted">
-                <span> Don't have an account?</span>
-                <Link to={registerPath} className="fw-bold"> Create an Account</Link>
-            </div> */}
+            <div className="mt-5 text-muted d-flex align-items-center justify-content-between">
+                <div>
+                    <span>Connect To Admin: </span>
+                    <a href="https://adeelshariff-portfolio.vercel.app/" target="_blank" rel="noreferrer" className="fw-bold">MAS</a>
+                </div>
+                <a
+                    href="https://api.whatsapp.com/send/?phone=923363432340&text&type=phone_number&app_absent=0"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-success p-0 lh-1"
+                    aria-label="Contact MAS on WhatsApp"
+                    title="Contact MAS on WhatsApp"
+                >
+                    <FiPhoneCall size={16} />
+                </a>
+            </div>
         </>
     )
 }
