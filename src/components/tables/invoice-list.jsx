@@ -95,13 +95,13 @@ const InvoiceList = () => {
       header: () => "Actions",
       cell: info => (
         <div className="hstack gap-2 justify-content-end">
-          <Link to="/payment/view" className="avatar-text avatar-md" title="View">
+          <Link to="/invoice/view" className="avatar-text avatar-md" title="View">
             <FiEye />
           </Link>
           <button type="button" className="avatar-text avatar-md border-0 bg-transparent" title="View sales bill" onClick={() => setSelectedBill(info.row.original)}>
             <FiFileText />
           </button>
-          <Link to="/payment/edit" className="avatar-text avatar-md" title="Edit">
+          <Link to="/invoice/edit" className="avatar-text avatar-md" title="Edit">
             <FiEdit3 />
           </Link>
           <a href="#" className="avatar-text avatar-md" title="Delete">

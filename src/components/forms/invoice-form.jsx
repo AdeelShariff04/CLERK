@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import SelectDropdown from '@/components/shared/SelectDropdown'
-import { currencyOptionsData } from '@/utils/fackData/currencyOptionsData'
+import { currencyOptionsData } from '@/utils/fackData/extrafackdata/currencyOptionsData'
 import { customerData } from '@/utils/fackData/customerData'
 import { inventoryData } from '@/utils/fackData/inventoryData'
 import { FiCamera, FiInfo, FiTrash2 } from 'react-icons/fi'
